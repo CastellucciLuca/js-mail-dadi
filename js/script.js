@@ -38,3 +38,13 @@ gameStart.addEventListener ("click", function() {
         document.getElementById("result").innerHTML = "Draw!";
     }
 });
+//EMAIL---
+
+//Definizione Variabili
+let userEmail;
+
+const sendEmail = document.getElementById("invia");
+
+sendEmail.addEventListener ("click", function);
+
+userEmail = document.getElementById("user-email").value;
