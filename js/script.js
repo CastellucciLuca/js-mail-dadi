@@ -1,4 +1,4 @@
-//Definizione Array
+//Definizione Array EMAIL
 const emailList = [
     "luigi098@gmail.com",
     "gigio08@gmail.com",
@@ -48,7 +48,7 @@ const sendEmail = document.getElementById("invia");
 
 sendEmail.addEventListener ("click", function() {
     userEmail = document.getElementById("user-email").value;
-    //CONTROLLO TRA TUTTE LE EMAIL SE LA MIA è PRESENTE ("castelluccilu98@gmail.com")
+    //CONTROLLO TRA TUTTE LE EMAIL SE LA MIA è PRESENTE (emailList)
     for (let i = 0 ; i < emailList.length; i++){
     
     if (userEmail === emailList[i]){
