@@ -1,20 +1,4 @@
-//Definizione Array EMAIL
-const emailList = [
-    "luigi098@gmail.com",
-    "gigio08@gmail.com",
-    "luigia098@gmail.com",
-    "castelluccilu98@gmail.com",
-    "morgana@gmail.com",
-    "leopoldi@gmail.com",
-    "roberto@gmail.com",
-    "bolean234@gmail.com",
-    "booleano@gmail.com",
-    "master984@gmail.com",
-    "oro@gmail.com",
-    "platino@gmail.com",
-    "diamatti@gmail.com",
-    "orione@gmail.com",
-];
+//DADI---
 //Definizione Variabili
 const gameStart = document.getElementById("game-start")
 
@@ -39,12 +23,29 @@ gameStart.addEventListener ("click", function() {
     }
 });
 //EMAIL---
-
+//Definizione Array EMAIL
+const emailList = [
+    "luigi098@gmail.com",
+    "gigio08@gmail.com",
+    "luigia098@gmail.com",
+    "castelluccilu98@gmail.com",
+    "morgana@gmail.com",
+    "leopoldi@gmail.com",
+    "roberto@gmail.com",
+    "bolean234@gmail.com",
+    "booleano@gmail.com",
+    "master984@gmail.com",
+    "oro@gmail.com",
+    "platin@gmail.com",
+    "diamatti@gmail.com",
+    "orione@gmail.com",
+];
 //Definizione Variabili
 let userEmail;
 
 const sendEmail = document.getElementById("invia");
 
+let emailSent;
 
 sendEmail.addEventListener ("click", function() {
     userEmail = document.getElementById("user-email").value;
@@ -52,11 +53,16 @@ sendEmail.addEventListener ("click", function() {
     for (let i = 0 ; i < emailList.length; i++){
     
     if (userEmail === emailList[i]){
-        alert("Email inviata!")
-    } else {
-
+        emailSent = true;
+    } else{
+        emailSent = false;
+    }
     }
     
+    if (emailSent == true){
+        alert("Email inviata con successo!");
+    } else{
+        alert("Email non presente nei registri!");
     }
 
 });
