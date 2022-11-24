@@ -45,21 +45,22 @@ let userEmail;
 
 const sendEmail = document.getElementById("invia");
 
-let emailSent;
+
 
 sendEmail.addEventListener ("click", function() {
     userEmail = document.getElementById("user-email").value;
+
+    let emailSent = false;
     //CONTROLLO TRA TUTTE LE EMAIL SE LA MIA è PRESENTE (emailList)
     for (let i = 0 ; i < emailList.length; i++){
     
-    if (userEmail === emailList[i]){
+    
+    if (userEmail == emailList[i]){
         emailSent = true;
-    } else{
-        emailSent = false;
     }
     }
     
-    if (emailSent == true){
+    if (emailSent){
         alert("Email inviata con successo!");
     } else{
         alert("Email non presente nei registri!");
